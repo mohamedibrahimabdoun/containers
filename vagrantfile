@@ -3,8 +3,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/jammy64"
 
   # Define the master node
-  config.vm.define "test-machine" do |kube|
-    kube.vm.hostname = "test-machin"
+  config.vm.define "mymachine" do |kube|
+    kube.vm.hostname = "mymachine"
     kube.vm.synced_folder ".", "/vagrant"
 
     # Public network on the same WiFi network as the host
