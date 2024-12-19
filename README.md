@@ -1,8 +1,9 @@
 
 
-*## How Container works internally
+* ## How Container works internally
 
 
+* ## 
 
 * ##  Videos
 
@@ -18,11 +19,12 @@
 |                                                                                                                                     |
 
 
+
 * ## Blogs
 
 
 
-* ## [Creating Container from Scratch](CREATE_CONTAINER_FROM_SCRATCH.md)
+* ## [Creating Container from Scratch](doc/CREATE_CONTAINER_FROM_SCRATCH.md)
 
 
 
