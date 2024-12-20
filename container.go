@@ -23,6 +23,9 @@ func main() {
 			syscall.CLONE_NEWPID |
 			syscall.CLONE_NEWNET |
 			syscall.CLONE_NEWUSER,
+		//  UidMappings and GidMappings. We have a field called ContainerID ,
+		// which we are setting to 0. This means we are mapping the uid and gid 0 within the container to
+		//the uid and gid of the user who launched the process.
 		UidMappings: []syscall.SysProcIDMap{
 			{
 				ContainerID: 0,
@@ -38,9 +41,6 @@ func main() {
 			},
 		},
 	}
-	//  UidMappings and GidMappings. We have a field called ContainerID ,
-	// which we are setting to 0. This means we are mapping the uid and gid 0 within the container to
-	//the uid and gid of the user who launched the process.
 
 	if err := cmd.Run(); err != nil {
 		fmt.Printf("Error running the /bin/bash command - %s\n", err)
